@@ -1,4 +1,4 @@
-##响应链
+## 响应链
 响应链分为两个阶段:
 
 1.寻找合适的View（hitTest的过程）； hitTest 的响应顺序为UIApplication->UIWindow->UIViewController->....->UIView
@@ -67,7 +67,7 @@ Tap onTapOneClick(tap:)
 	如：AB 都是头文件；A->B(a引用b) ；B->A(b引用A)  会导致循环引用
 
 
-##CocoaPod 使用
+## CocoaPod 使用
 	官方文档(http://guides.cocoapods.org/using/using-cocoapods.html)
 	使用教程(https://juejin.im/entry/57b3bafd6be3ff006a06baa4)
 	pod install 使用场景，在工程第一次使用pods 的时候，并且有编辑Podfile 的时候使用
@@ -89,7 +89,7 @@ Tap onTapOneClick(tap:)
 	load 会在类初始化加载的时候调用，initialze 方法会在程序调用类的第一个实例或类方法的时候调用；
 
 
-##Block
+## Block
 	参考：http://blog.devtang.com/2013/07/28/a-look-inside-blocks/
 	Block 分三中类型：
 	NSConcreateGlobalBlock：全局的静态 block，不会访问任何外部变量（写在main中的block，或者声明成静态属性的block）；
@@ -109,7 +109,7 @@ Tap onTapOneClick(tap:)
 	通过SEL 可以找到对应的Method ，函数 class_getClassMethod(cls, SEL);
 	
 	
-##系统的ReadOnly 属性怎么修改
+## 系统的ReadOnly 属性怎么修改
 	通过KVO 进行修改
 
 ## property 和 synthesize 和 dynamic
@@ -127,7 +127,7 @@ Tap onTapOneClick(tap:)
 	5.在 category 中定义的所有属性
 	6.重载的属性
 	
-##关联
+## 关联
 	删除关联：调用 objc_setAssociatedObject 方法并传入一个 nil 值来清除一个关联objc_removeAssociatedObject 这个方法，系统不推荐使用，所以使用remove的；
 	关联属性的释放，会在在NSObject  中dealloc 中进行释放；
 	obj_setAssociatedObject(instance, key, value ,释放策略);
@@ -138,7 +138,7 @@ Tap onTapOneClick(tap:)
 	ARC 在引用计数为0 的时候，自动释放（内存泄漏是指有块内存没有释放）；
 	GC 是定期查找的方式，释放没有使用的内存（内存泄漏是指：有块内存在使用却被释放了）；
 
-##Cookie 使用
+## Cookie 使用
 	参考：http://www.jianshu.com/p/d2c478bbcca5
 	
 	// 将可变字典转化为cookie
@@ -149,9 +149,9 @@ Tap onTapOneClick(tap:)
     [cookieStorage setCookie:cookie]; 注意系统原来有的cookie 会被  cookie reset！！！！！；
 	需要了解WKWebView	
 
-##layoutSubView 调用时机
+## layoutSubView 调用时机
 	参考：http://www.jianshu.com/p/eb2c4bb4e3f1
-###layoutSubViews
+### layoutSubViews
 	layoutSubView：默认没有做任何操作，需要子类重写，系统很多时候回去调用这个方法。
 	layoutSubViews的调用时机：
 	1.初始化不会触发layoutSubViews，但是如果设置了不为CGRectZero的frame的时候就会触发。
@@ -160,11 +160,11 @@ Tap onTapOneClick(tap:)
 	4.滚动一个UIScrollView会触发layoutSubViews；
 	5.旋转Screen 会触发UIView 的layoutSubViews；
 	6.改变一个UIView 大小的时候，也会触发UIView 的layoutSubViews 事件；
-###setNeedslayout
+### setNeedslayout
 	标记为需要重新布局，不立刻刷新，但layoutSubView 一定会被调用，配合layoutifNeeded 立即更新。
 	layoutIfNeeded 如果有需要刷新的标记，立刻调用layoutSubViews进行布局。
 
-##FMDB 数据库如何保证线程安全
+## FMDB 数据库如何保证线程安全
 	首先用一个数据库文件地址来初使化 FMDatabaseQueue，然后就可以将一个闭包 (block) 传入 inDatabase 方法中。该队列是同步队列。FMDatabaseQueue是一个串行队列，它不支持串行任务嵌套执行
 	
 ## 性能检测
