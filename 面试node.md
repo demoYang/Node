@@ -66,6 +66,7 @@ Tap onTapOneClick(tap:)
 ## import 为什么对导致循环引用
 	如：AB 都是头文件；A->B(a引用b) ；B->A(b引用A)  会导致循环引用
 
+
 ##CocoaPod 使用
 	官方文档(http://guides.cocoapods.org/using/using-cocoapods.html)
 	使用教程(https://juejin.im/entry/57b3bafd6be3ff006a06baa4)
@@ -106,6 +107,7 @@ Tap onTapOneClick(tap:)
 	};
 	从结构体重可以看出，IMP(实现) 和 SEL(方法名称)是Method 中的一个变量，并且
 	通过SEL 可以找到对应的Method ，函数 class_getClassMethod(cls, SEL);
+	
 	
 ##系统的ReadOnly 属性怎么修改
 	通过KVO 进行修改
