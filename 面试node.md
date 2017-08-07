@@ -167,6 +167,27 @@ Tap onTapOneClick(tap:)
 ## FMDB 数据库如何保证线程安全
 	首先用一个数据库文件地址来初使化 FMDatabaseQueue，然后就可以将一个闭包 (block) 传入 inDatabase 方法中。该队列是同步队列。FMDatabaseQueue是一个串行队列，它不支持串行任务嵌套执行
 	
+## id instance 的区别
+	参考：http://www.jianshu.com/p/bd913b3a8e93
+	在ARC(auto reference count)环境下：instancetype 用在在编译器确定实例的类型，而使用id 的话，编译器不检查类型，运行时检查类型；
+	在MRC环境下，instancetype 和 id 一样，不做具体类型检查；
+	id 可以作为方法的参数，单instancetype 不可以；
+	instancetype 只适用于初始化 和 便利构造器的返回值类型；
+## HTTPS
+	1.server 向服务器发送证书
+	2.clinet 验证证书，
+## 面向对象的理解
+	参考：https://my.oschina.net/shaw1688/blog/601142
+	面向对象3大特征：封装 ，继承、 多态
+	封装：一系列方法 和 数据的组合
+	继承:子类拥有父类的公有属性 和 方法
+	多态:多态，就是同一个实现接口，对不同的实例而执行不同的操作
+## OC 一门动态的语言，原因 体现
+	参考:https://onevcat.com/2012/04/objective-c-runtime/
+	1.动态类型:即运行时再决定对象的类型
+	2.动态绑定:在实例所属类确定后，将某些属性和相应的方法绑定到实例上
+	3.动态加载
+	
 ## 性能检测
 https://blog.leancloud.cn/2835/
 http://www.jianshu.com/p/cdae09aa4f8d
