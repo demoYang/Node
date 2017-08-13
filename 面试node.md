@@ -189,10 +189,10 @@ Tap onTapOneClick(tap:)
 	3.动态加载
 	
 ## 性能检测
-https://blog.leancloud.cn/2835/
-http://www.jianshu.com/p/cdae09aa4f8d
-内存泄漏定位
-http://www.jianshu.com/p/c0aa12d91f05
-使用的时候要勾选hide system Libiaries， 和 Invert call  tree
+	https://blog.leancloud.cn/2835/
+	http://www.jianshu.com/p/cdae09aa4f8d
+	内存泄漏定位
+	http://www.jianshu.com/p/c0aa12d91f05
+	使用的时候要勾选hide system Libiaries， 和 Invert call  tree
 
  
